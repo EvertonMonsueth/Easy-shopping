@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Define uma caixa fixa*/
+    /* Box-sizing: context-box; Caixa cresce tamnanho objeto */
+    font-weight: 400; /*Define o espesura da fonte */
+    color: #5d5d7d;/*Define a cor da fonte*/
+}
+.oswald uniquifier {/*Define o tipo de fonte link para html*/
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+.div {
+    height: 100vh;/*O conteudo expresso em 100% da altura da tela*/
+    width: 100vw; /*o Conteudo expresso em 100% da largura da tela*/
+}
+.container-left {
+    display: inline-block; /*conteudo dividio em blocos horizontal*/
+    width: 60%; /*o conteudo do lado esquedo ficara com 60% da tela*/
+    margin-top: 25%;/*Define margem superior, da borda para objeto*/ 
+    padding-left: 120px;/*Define margem do objeto para fora*/
+    }
+.container-right {
+    display: inline-block; /*conteudo dividio em blocos horizontal*/
+    background-color: rgba(93, 93, 125, 0.16);/*Define a cor da caixa de fundo*/
+    height: 100vh;/*Define dimensão objeto, 100% da tela*/
+    width: 40%;/*Define dimensão objeto, 40% da tela*/
+    position: absolute;/*Define a posição objeto na tela*/
+}
+img {
+    position: relative;/*Define posição do objeto na tela, (relative deve escrever a posição a ser fixada)*/
+    top: 25%;/*Posição da imagem, em relação relative*/
+    right: 130px;/*Posição da imagem em relação relative*/
+}
+h1 {
+    font-size: 60px;/*Define o tamanho da fonte*/
+    line-height: 80px;/*Define o espaçamento da fonte*/
+    width: 368px;/*Define largura do objeto*/
+}
+p {
+    font-size: 25px;/*Define o tamanho da fonte*/
+    line-height: 48px;/*Define espaçamento entre linhas*/
+    margin: 15px 0;/*Define margem estilo relogio*/
+    /* colocando 2 pontos (superior-Inferior e direita-esquerda */
+    width: 540px;
+}
+button {
+    width: 269px;
+    height: 62px;
+    background: rgba(148, 153, 234, 0.6);
+    border-radius: 35px;
+    border: none;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+button:hover {
+    /*Passando o mouse em cima do botão fica mais transparente*/
+    opacity: 0.8;
+}
+button:active {
+    opacity: .5;
+}
+a {
+    font-size: 28px;
+    font-weight: 600;
+    margin-right: 41px;
+    color: rgba(93, 93, 125, 1);
+}
+a:nth-child(2) {/*É feita a configuração somente para o numero indicado*/
+    opacity: 0.4;
+}
+a:hover {/*Executa uma ação ao passar o mouse no link <a>*/
+    opacity: 0.4;/*Ação ao passar o mouse, transparência*/
+    }
+a:active {/*Executa a ação ao clicar*/
+    opacity: .8;
+    }
+header {
+    margin: 24px 0 0 57px;/*coloca margem no objeto no esquema relogio*/
+        cursor: pointer;
+}
+@media screen and (max-width: 1200px) {/*Define uma ação quando px estive abaixo de 1200*/
+    .container-left {
+        width: 100%;/*Define a largura do objeto*/
+        height: 50%;/*Define a altura do objeto*/
+        padding: 0;
+        margin: 0;
+    }
+    .container-right {
+        display: block;/*Define blocos na vertical*/
+        height: auto;/*Define altura do objeto*/
+        width: 100%;/*Define largura do objeto*/
+        position: static;
+        padding: 40px;
+    }
+    img {
+        position: static;/*imagem vai ficar estatica*/
+        width: 90%;/*imagem ficará com 90% da tela*/
+    }
+    header {
+        display: none;/*como será apresentada na tela, inline= em linha
+        block= blocos horizontais e vertical*/
+    }
+    h1{
+        font-size: 36px;/*Tamanho da fonte*/
+        line-height: 52px;/*Define espaçamento da letra*/
+        width: auto;/*Define a largura*/
+        margin: 58px 50px 0 50px;/* Define a margem estilo relógio*/
+        text-align: center;/*Define o texto alinhado centro*/
+    }
+    p{
+        margin: 15px 40px;/*Definição de margem estilo relogio*/
+        width: auto;
+        text-align: center;
+        line-height: 24px;
+    }
+    button{
+        margin: 0 auto;
+        display: block;
+    }
+}
+@media screen and (max-width: 330px){
+    .container-left{
+        height: 70%;
+    }
+}
